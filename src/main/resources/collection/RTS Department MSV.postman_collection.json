@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "82f7a4ad-f0f9-4e9b-8b11-b81f4ee1a7d8",
+		"name": "RTS Department MSV",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22065047"
+	},
+	"item": [
+		{
+			"name": "Get all departments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8900/departments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8900",
+					"path": [
+						"departments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get departments by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8900/departments/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8900",
+					"path": [
+						"departments",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a department",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Aerodynamics\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8900/departments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8900",
+					"path": [
+						"departments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a department by id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":20,\r\n    \"name\":\"mechanical\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8900/departments/20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8900",
+					"path": [
+						"departments",
+						"20"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a department by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8900/departments/20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8900",
+					"path": [
+						"departments",
+						"20"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
