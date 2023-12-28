@@ -1,6 +1,6 @@
 package com.avensys.rts.departmentservice.exception;
 
-import com.avensys.rts.industryservice.util.ResponseUtil;
+import com.avensys.rts.departmentservice.util.ResponseUtil;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;

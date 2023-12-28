@@ -1,20 +1,17 @@
 package com.avensys.rts.departmentservice.service;
 
-import com.avensys.rts.departmentservice.entity.DepartmentEntity;
-import com.avensys.rts.departmentservice.payloadrequest.DepartmentRequestDTO;
-import com.avensys.rts.departmentservice.payloadresponse.DepartmentResponseDTO;
-import com.avensys.rts.departmentservice.repository.DepartmentRepository;
-import com.avensys.rts.industryservice.entity.IndustryEntity;
-import com.avensys.rts.industryservice.payload.IndustryResponseDTO;
-import com.avensys.rts.industryservice.repository.IndustryRepository;
-import jakarta.persistence.EntityNotFoundException;
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import com.avensys.rts.departmentservice.entity.DepartmentEntity;
+import com.avensys.rts.departmentservice.payloadrequest.DepartmentRequestDTO;
+import com.avensys.rts.departmentservice.payloadresponse.DepartmentResponseDTO;
+import com.avensys.rts.departmentservice.repository.DepartmentRepository;
+
+import jakarta.persistence.EntityNotFoundException;
 
 /**
  * @author Koh He Xiang
