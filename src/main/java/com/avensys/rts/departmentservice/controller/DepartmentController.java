@@ -22,6 +22,7 @@ import java.util.List;
  */
 @RestController
 @CrossOrigin(origins = "*", allowedHeaders = "*")
+@RequestMapping("/api/departments")
 public class DepartmentController {
 
     private final Logger log = LoggerFactory.getLogger(DepartmentController.class);
@@ -37,7 +38,7 @@ public class DepartmentController {
      * This method is used to get all the departments
      * @return ResponseEntity<List<DepartmentResponseDTO>>
      */
-    @GetMapping("/departments")
+    @GetMapping("")
     public ResponseEntity<?> getAllDepartments() {
         log.info("Getting all departments: Controller");
         List<DepartmentResponseDTO> departmentResponseDTOList = departmentService.getAllDepartments();
@@ -49,7 +50,7 @@ public class DepartmentController {
      * @param id
      * @return ResponseEntity<DepartmentResponseDTO>
      */
-    @GetMapping("/departments/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<?> getDepartmentById(@PathVariable Integer id) {
         log.info("Getting department by id: Controller");
         DepartmentResponseDTO departmentResponseDTO = departmentService.getDepartmentById(id);
@@ -61,7 +62,7 @@ public class DepartmentController {
      * @param departmentRequestDTO
      * @return ResponseEntity<DepartmentResponseDTO>
      */
-    @PostMapping("/departments")
+    @PostMapping("")
     public ResponseEntity<?> createDepartment(@Valid @RequestBody DepartmentRequestDTO departmentRequestDTO) {
         log.info("Creating department: Controller");
         DepartmentResponseDTO departmentResponseDTO = departmentService.createDepartment(departmentRequestDTO);
@@ -74,7 +75,7 @@ public class DepartmentController {
      * @param departmentRequestDTO
      * @return ResponseEntity<DepartmentResponseDTO>
      */
-    @PutMapping("/departments/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<?> updateDepartment(@PathVariable Integer id, @Valid @RequestBody DepartmentRequestDTO departmentRequestDTO) {
         log.info("Updating department: Controller");
         DepartmentResponseDTO departmentResponseDTO = departmentService.updateDepartment(id, departmentRequestDTO);
@@ -86,7 +87,7 @@ public class DepartmentController {
      * @param id
      * @return
      */
-    @DeleteMapping("/departments/{id}")
+    @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteDepartment(@PathVariable Integer id) {
         log.info("Deleting department: Controller");
         departmentService.deleteDepartment(id);
