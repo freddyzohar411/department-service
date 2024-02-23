@@ -1,26 +1,33 @@
 package com.avensys.rts.departmentservice.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 /***
- * @author Koh He Xiang
- * This is the entity class for the department table in the database
+ * @author Koh He Xiang This is the entity class for the department table in the
+ *         database
  */
 @Entity
 @Table(name = "department")
-@Data
+@Setter
+@Getter
 @AllArgsConstructor
 @NoArgsConstructor
 public class DepartmentEntity {
 
-    @Id
-    @GeneratedValue( strategy = GenerationType.IDENTITY)
-    private Integer id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
 
-    @Column(name = "name", length = 50, unique = true )
-    private String name;
+	@Column(name = "name", length = 50, unique = true)
+	private String name;
 
 }

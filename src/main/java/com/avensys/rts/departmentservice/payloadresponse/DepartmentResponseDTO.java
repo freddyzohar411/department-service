@@ -1,17 +1,18 @@
 package com.avensys.rts.departmentservice.payloadresponse;
 
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 /**
- * author: Koh He Xiang
- * This is the DTO class for the Department response
+ * author: Koh He Xiang This is the DTO class for the Department response
  */
-@Data
+@Setter
+@Getter
 @AllArgsConstructor
 @NoArgsConstructor
 public class DepartmentResponseDTO {
-    private Integer id;
-    private String name;
+	private Integer id;
+	private String name;
 }
